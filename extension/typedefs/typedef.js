@@ -1,5 +1,3 @@
-/* eslint-disable */
-// noinspection ES6ShorthandObjectProperty
 ///
 /// Pipeline input
 ///

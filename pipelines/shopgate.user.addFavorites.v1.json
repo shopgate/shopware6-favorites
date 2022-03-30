@@ -79,13 +79,6 @@
           ],
           "output": []
         }
-      },
-      {
-        "id": "@shopgate/favorites",
-        "path": "@shopgate/favorites/catch/catchGenericError.js",
-        "type": "errorCatchExtension",
-        "input": [],
-        "output": []
       }
     ]
   }

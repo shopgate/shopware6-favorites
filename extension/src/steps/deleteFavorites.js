@@ -14,5 +14,4 @@ module.exports = async (context, input) => {
         e => context.log.debug(e) // the product has already been removed
       )
   }))
-  return { success: true }
 }

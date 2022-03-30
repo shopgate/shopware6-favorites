@@ -57,13 +57,6 @@
         "output": [
           {"key": "products", "id": "130"}
         ]
-      },
-      {
-        "type": "errorCatchExtension",
-        "id": "@shopgate/favorites",
-        "path": "@shopgate/favorites/catch/catchGenericError.js",
-        "input": [],
-        "output": []
       }
     ]
   }
