@@ -6,7 +6,7 @@ const { saveContextToken } = require('../services/contextManager')
  * This pipeline should be called from the cart extension,
  * once the user logs in/logs out
  *
- * @param {SW6Cart.PipelineContext} context
+ * @param {SW6Favorites.PipelineContext} context
  * @param {Object} input
  * @property {string} input.contextToken
  * @returns {Promise<void>}

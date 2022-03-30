@@ -6,9 +6,9 @@ class GeneralError extends Error {
     this.message = 'Error'
     this.code = 'ECART'
     /**
-     * @type {SW6Cart.SGCartError[]}
+     * @type {SW6Favorites.GeneralError[]}
      */
-    this.errors = [{ entityId, code, message: `SW6Cart.notice.${message}`, translated: false }]
+    this.errors = [{ entityId, code, message: `SW6Favorites.notice.${message}`, translated: false }]
   }
 }
 

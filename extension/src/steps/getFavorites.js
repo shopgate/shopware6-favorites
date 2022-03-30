@@ -4,7 +4,7 @@ const { getWishlistProducts, getSessionContext } = require('@shopware-pwa/shopwa
 const { decorateError } = require('../services/logDecorator')
 
 /**
- * @param {SW6Cart.PipelineContext} context
+ * @param {SW6Favorites.PipelineContext} context
  * @returns {Promise<{productIds: string[]}>}
  */
 module.exports = async (context) => {

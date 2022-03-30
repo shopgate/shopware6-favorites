@@ -6,7 +6,7 @@ const { getContextToken, saveContextToken } = require('../services/contextManage
 const { decorateMessage, decorateError } = require('../services/logDecorator')
 
 /**
- * @param {SW6Cart.PipelineContext} context
+ * @param {SW6Favorites.PipelineContext} context
  * @returns {Promise<void>}
  */
 module.exports = async (context) => {

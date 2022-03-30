@@ -3,8 +3,8 @@
 const { addWishlistProduct, getWishlistProducts, removeWishlistProduct} = require('@shopware-pwa/shopware-6-client')
 
 /**
- * @param {SW6Cart.PipelineContext} context
- * @param {SGPutFavorites} input
+ * @param {SW6Favorites.PipelineContext} context
+ * @param {SW6Favorites.SGPutFavorites} input
  * @returns {Promise<void>}
  */
 module.exports = async (context, input) => {
