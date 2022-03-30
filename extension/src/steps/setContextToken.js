@@ -3,7 +3,7 @@
 const { saveContextToken } = require('../services/contextManager')
 
 /**
- * This pipeline should be called from the user extension,
+ * This pipeline should be called from the cart extension,
  * once the user logs in/logs out
  *
  * @param {SW6Cart.PipelineContext} context
