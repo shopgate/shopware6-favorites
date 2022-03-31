@@ -57,5 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+# shopgate compiled configs
 extension/config.json
 frontend/config.json

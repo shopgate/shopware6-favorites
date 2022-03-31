@@ -1,0 +1,14 @@
+{
+  "name": "pipelinestest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "integration": "node_modules/.bin/newman run collection.json -e environment.json -g globals.json --color=on --bail"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "latest"
+  }
+}
