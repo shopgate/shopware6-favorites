@@ -1,3 +1,11 @@
+/* eslint-disable */
+// noinspection ES6ShorthandObjectProperty
+const {
+  ClientApiError,
+  EntityError,
+  ShopwareError
+} = require('@shopware-pwa/commons')
+
 ///
 /// Pipeline input
 ///
@@ -34,4 +42,3 @@
 /** @typedef {EntityError} SW6Favorites.SWEntityError */
 /** @typedef {ClientApiError} SW6Favorites.SWClientApiError */
 /** @typedef {ShopwareError} SW6Favorites.ShopwareError */
-/** @typedef {Cart} SW6Favorites.SWCart */
