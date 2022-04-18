@@ -4,10 +4,7 @@
     "id": "shopgate.user.addFavorites.v1",
     "public": true,
     "input": [
-      {
-        "id": "1",
-        "key": "productId"
-      }
+      {"id": "1", "key": "productId"}
     ],
     "output": [],
     "steps": [
@@ -16,16 +13,10 @@
         "path": "@shopgate/favorites/convertToArray.js",
         "type": "extension",
         "input": [
-          {
-            "id": "1",
-            "key": "productId"
-          }
+          {"id": "1", "key": "productId"}
         ],
         "output": [
-          {
-            "id": "1",
-            "key": "productIds"
-          }
+          {"id": "1", "key": "productIds"}
         ]
       },
       {
@@ -34,25 +25,17 @@
         "type": "extension",
         "input": [],
         "output": [
-          {
-            "id": "10",
-            "key": "userId"
-          }
+          {"id": "10", "key": "userId"}
         ]
       },
       {
         "type": "conditional",
         "input": [
-          {
-            "id": "10",
-            "key": "userId"
-          }
+          {"id": "10", "key": "userId"}
         ],
         "expression": {
           "ok": [
-            {
-              "name": "userId"
-            }
+            {"name": "userId"}
           ]
         },
         "then": {
@@ -60,10 +43,7 @@
           "path": "@apite/shopware6-favorites/src/steps/addFavorites.js",
           "type": "extension",
           "input": [
-            {
-              "id": "1",
-              "key": "productIds"
-            }
+            {"id": "1", "key": "productIds"}
           ],
           "output": []
         },
@@ -72,10 +52,7 @@
           "path": "@shopgate/favorites/anonymous/addItem.js",
           "type": "extension",
           "input": [
-            {
-              "id": "1",
-              "key": "productIds"
-            }
+            {"id": "1", "key": "productIds"}
           ],
           "output": []
         }

@@ -4,10 +4,7 @@
     "id": "apite.favorites.setContextToken.v1",
     "public": true,
     "input": [
-      {
-        "key": "contextToken",
-        "id": "1000"
-      }
+      {"key": "contextToken", "id": "1000"}
     ],
     "output": [],
     "steps": [
@@ -16,10 +13,7 @@
         "path": "@apite/shopware6-favorites/src/steps/setContextToken.js",
         "type": "extension",
         "input": [
-          {
-            "key": "contextToken",
-            "id": "1000"
-          }
+          {"key": "contextToken", "id": "1000"}
         ],
         "output": []
       },
@@ -43,16 +37,10 @@
         "path": "@apite/shopware6-favorites/src/steps/addFavorites.js",
         "type": "extension",
         "input": [
-          {
-            "id": "40",
-            "key": "productIds"
-          }
+          {"id": "40", "key": "productIds"}
         ],
         "output": [
-          {
-            "id": "50",
-            "key": "success"
-          }
+          {"id": "50", "key": "success"}
         ]
       },
       {

@@ -18,7 +18,7 @@ module.exports = async (context) => {
   const productIds = await getWishlistProducts()
     .then(({ products: { elements } }) => elements.map(({ id }) => id))
     .catch(e => {
-      // todo: handle error
+      // Cannot throw in getFavIds pipe, theme cannot handle
       context.log.warn(decorateError(e))
       return []
     })
