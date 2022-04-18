@@ -1,6 +1,7 @@
 'use strict'
 
 const { removeWishlistProduct } = require('@shopware-pwa/shopware-6-client')
+const { throwOnApiError } = require('../services/errorManager')
 
 /**
  * @param {SW6Favorites.PipelineContext} context
@@ -8,10 +9,9 @@ const { removeWishlistProduct } = require('@shopware-pwa/shopware-6-client')
  * @returns {Promise<void>}
  */
 module.exports = async (context, input) => {
-  await Promise.all(input.productIds.map(async (element) => {
-    await removeWishlistProduct(element)
-      .catch(
-        e => context.log.debug(e) // the product has already been removed
-      )
-  }))
+  await Promise.all(
+    input.productIds.map(
+      element => removeWishlistProduct(element).catch(e => throwOnApiError(e, context))
+    )
+  )
 }

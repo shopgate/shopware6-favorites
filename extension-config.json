@@ -39,7 +39,9 @@
         "shopgate.user.addFavorites.v1:before",
         "shopgate.user.deleteFavorites.v1:before",
         "shopgate.user.getFavorites.v1:before",
-        "shopgate.user.putFavorites.v1:before"
+        "shopgate.user.getFavoriteIds.v1:before",
+        "shopgate.user.putFavorites.v1:before",
+        "apite.favorites.setContextToken.v1:afterContextTokenSet"
       ],
       "input": [],
       "output": []

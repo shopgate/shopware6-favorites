@@ -1,7 +1,7 @@
 'use strict'
 
 const { addWishlistProduct, getSessionContext } = require('@shopware-pwa/shopware-6-client')
-const { decorateError } = require('../services/logDecorator')
+const { throwOnApiError } = require('../services/errorManager')
 
 /**
  * @param {SW6Favorites.PipelineContext} context
@@ -9,19 +9,16 @@ const { decorateError } = require('../services/logDecorator')
  * @returns {Promise<{success: boolean}>}
  */
 module.exports = async (context, input) => {
-  // todo: handle error
-  const sessionContext = await getSessionContext()
+  const sessionContext = await getSessionContext().catch(e => throwOnApiError(e, context))
 
   if (sessionContext.customer === null) {
     return { success: false }
   }
 
-  await Promise.all(input.productIds.map(async (element) => {
-    await addWishlistProduct(element)
-      .catch(
-        // todo: handle other types of errors
-        e => context.log.debug(decorateError(e)) // the product has already been added
-      )
-  }))
+  await Promise.all(
+    input.productIds.map(
+      element => addWishlistProduct(element).catch(e => throwOnApiError(e, context))
+    )
+  )
   return { success: true }
 }

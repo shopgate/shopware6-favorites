@@ -2,14 +2,14 @@
 
 const { getWishlistProducts, getSessionContext } = require('@shopware-pwa/shopware-6-client')
 const { decorateError } = require('../services/logDecorator')
+const { throwOnApiError } = require('../services/errorManager')
 
 /**
  * @param {SW6Favorites.PipelineContext} context
  * @returns {Promise<{productIds: string[]}>}
  */
 module.exports = async (context) => {
-  // todo: handle error
-  const sessionContext = await getSessionContext()
+  const sessionContext = await getSessionContext().catch(e => throwOnApiError(e, context))
 
   if (sessionContext.customer === null) {
     return { productIds: [] }

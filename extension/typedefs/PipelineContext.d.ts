@@ -43,12 +43,6 @@ declare namespace SW6Favorites {
   interface PipelineConfiguration {
     endpoint: string
     accessToken: string
-    settings: PipelineConfigSettings
-  }
-
-  interface PipelineConfigSettings {
-    legalText: string
-    legalInfo: string
   }
 
   interface PipelineContextMeta {

@@ -1,6 +1,6 @@
 'use strict'
 
-const extension = '@apite-shopware6-cart'
+const extension = '@apite-shopware6-favorites'
 
 /**
  * @param {SW6Favorites.SWClientApiError|SW6Favorites.SWEntityError|SW6Favorites.ShopwareError|Error} error
