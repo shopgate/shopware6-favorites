@@ -29,7 +29,6 @@ const saveContextToken = async function (contextToken, context) {
   })
 }
 
-
 module.exports = {
   getContextToken,
   saveContextToken
