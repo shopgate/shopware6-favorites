@@ -1,0 +1,66 @@
+{
+  "version": "1",
+  "pipeline": {
+    "id": "shopgate.user.getFavoriteIds.v1",
+    "public": true,
+    "input": [],
+    "output": [
+      {"key": "productIds", "id": "120"}
+    ],
+    "steps": [
+      {
+        "type": "extension",
+        "id": "@shopgate/favorites",
+        "path": "@shopgate/favorites/user/getUserId.js",
+        "input": [],
+        "output": [
+          {"key": "userId", "id": "20"}
+        ]
+      },
+      {
+        "type": "conditional",
+        "input": [
+          {"key": "userId", "id": "20"}
+        ],
+        "expression": {
+          "ok": [
+            {"name": "userId"}
+          ]
+        },
+        "then": {
+          "id": "@apite/shopware6-favorites",
+          "path": "@apite/shopware6-favorites/src/steps/getFavorites.js",
+          "type": "extension",
+          "input": [],
+          "output": [
+            {"key": "productIds", "id": "120"}
+          ]
+        },
+        "else": {
+          "type": "extension",
+          "id": "@shopgate/favorites",
+          "path": "@shopgate/favorites/anonymous/getItems.js",
+          "input": [],
+          "output": [
+            {"key": "productIds", "id": "120"}
+          ]
+        }
+      },
+      {
+        "type": "conditional",
+        "input": [{"key": "productIds", "id": "120"}],
+        "expression": {"notok": [{"name":"productIds"}]},
+        "then": {
+          "type": "staticValue",
+          "input": [],
+          "values": [
+            {"key": "productIds", "value": []}
+          ],
+          "output": [
+            {"key": "productIds", "id": "120"}
+          ]
+        }
+      }
+    ]
+  }
+}
