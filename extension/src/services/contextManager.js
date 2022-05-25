@@ -14,7 +14,7 @@ const _getStorage = context => context.meta.userId ? context.storage.user : cont
  * @param {SW6Favorites.PipelineContext} context
  * @return {Promise<string>}
  */
-const getContextToken = async context => _getStorage(context).get('contextToken')
+const getContextToken = async context => await _getStorage(context).get('contextToken')
 
 /**
  * Saves the current checkout token into internal storage (user or device)
@@ -24,7 +24,7 @@ const getContextToken = async context => _getStorage(context).get('contextToken'
  * @returns Promise<void>
  */
 const saveContextToken = async function (contextToken, context) {
-  _getStorage(context).set('contextToken', contextToken).catch(err => {
+  await _getStorage(context).set('contextToken', contextToken).catch(err => {
     context.log.error(decorateError(err), 'Failed to save context token.')
   })
 }
