@@ -1,15 +1,20 @@
 'use strict'
 
+const {
+  apiManager: { createApiConfig },
+  errorManager: { throwOnApiError }
+} = require('@apite/shopware6-utility')
 const { addWishlistProduct, getSessionContext } = require('@shopware-pwa/shopware-6-client')
-const { throwOnApiError } = require('../services/errorManager')
 
 /**
- * @param {SW6Favorites.PipelineContext} context
- * @param {SW6Favorites.SGAddFavorites} input
+ * @param {ApiteSW6Helper.PipelineContext} context
+ * @param {Object} input
+ * @param {[string]} input.productIds
  * @returns {Promise<{success: boolean}>}
  */
 module.exports = async (context, input) => {
-  const sessionContext = await getSessionContext().catch(e => throwOnApiError(e, context))
+  const apiConfig = await createApiConfig(context)
+  const sessionContext = await getSessionContext(apiConfig).catch(e => throwOnApiError(e, context))
 
   if (sessionContext.customer === null) {
     return { success: false }
@@ -17,7 +22,7 @@ module.exports = async (context, input) => {
 
   await Promise.all(
     input.productIds.map(
-      element => addWishlistProduct(element).catch(e => throwOnApiError(e, context))
+      element => addWishlistProduct(element, apiConfig).catch(e => throwOnApiError(e, context))
     )
   )
   return { success: true }
