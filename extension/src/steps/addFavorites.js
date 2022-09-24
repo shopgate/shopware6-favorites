@@ -7,7 +7,7 @@ const {
 const { addWishlistProduct, getSessionContext } = require('@shopware-pwa/shopware-6-client')
 
 /**
- * @param {ApiteSW6Helper.PipelineContext} context
+ * @param {ApiteSW6Utility.PipelineContext} context
  * @param {Object} input
  * @param {[string]} input.productIds
  * @returns {Promise<{success: boolean}>}
