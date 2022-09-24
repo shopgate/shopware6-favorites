@@ -60,3 +60,6 @@ typings/
 # shopgate compiled configs
 extension/config.json
 frontend/config.json
+
+pnpm-lock.yaml
+postman-report.html
