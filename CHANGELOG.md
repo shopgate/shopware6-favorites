@@ -7,7 +7,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 0.1.0-beta.2
 
 - removed service classes (moved to separate module)
-- removed tests (moved to separate module)
 
 ## 0.1.0-beta.1
 
