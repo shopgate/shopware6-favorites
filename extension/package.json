@@ -1,6 +1,5 @@
 {
   "name": "@apite/shopware6-favorites",
-  "version": "1.0.0",
   "description": "Shopgate Connect Shopware 6 Favorites extension created by Apite",
   "license": "Apache-2.0",
   "type": "commonjs",
@@ -13,8 +12,8 @@
     "frontend": "sgconnect frontend start"
   },
   "dependencies": {
-    "@apite/shopware6-utility": "^0.1.0",
-    "@shopware-pwa/shopware-6-client": "^1.5.3"
+    "@apite/shopware6-utility": "^1.0.1",
+    "@shopware-pwa/shopware-6-client": "^1.6.1"
   },
   "devDependencies": {
     "@shopware-pwa/commons": "^1.5.3",
