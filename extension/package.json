@@ -1,6 +1,5 @@
 {
   "name": "@apite/shopware6-favorites",
-  "version": "1.0.0",
   "description": "Shopgate Connect Shopware 6 Favorites extension created by Apite",
   "license": "Apache-2.0",
   "type": "commonjs",
