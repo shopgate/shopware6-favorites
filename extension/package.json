@@ -12,7 +12,7 @@
     "frontend": "sgconnect frontend start"
   },
   "dependencies": {
-    "@apite/shopware6-utility": "^1.0.1",
+    "@apite/shopware6-utility": "^1.1.0",
     "@shopware-pwa/shopware-6-client": "^1.6.1"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "eslint": "^8.16.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.1",
     "nyc": "15.1.0",
     "standard": "^17.0.0"
   }
