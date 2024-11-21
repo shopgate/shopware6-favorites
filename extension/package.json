@@ -11,8 +11,7 @@
     "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx ."
   },
   "dependencies": {
-    "@apite/shopware6-utility": "^2.0.0-beta.1",
-    "@shopware-pwa/shopware-6-client": "^1.6.1"
+    "@apite/shopware6-utility": "^2.0.0-beta.1"
   },
   "devDependencies": {
     "@shopware-pwa/commons": "^1.5.3",
