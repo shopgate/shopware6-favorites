@@ -1,10 +1,10 @@
 'use strict'
 
 const {
-  apiManager: { createApiConfig },
+  apiManager: { getWishlistProducts, getSessionContext },
+  clientManger: { createApiConfig },
   errorManager: { throwOnApiError }
 } = require('@apite/shopware6-utility')
-const { getWishlistProducts, getSessionContext } = require('@shopware-pwa/shopware-6-client')
 const { decorateError } = require('../services/logDecorator')
 
 /**
@@ -19,7 +19,7 @@ module.exports = async (context) => {
     return { productIds: [] }
   }
 
-  const productIds = await getWishlistProducts({}, apiConfig)
+  const productIds = await getWishlistProducts(apiConfig)
     .then(({ products: { elements } }) => elements.map(({ id }) => id))
     .catch(e => {
       // Cannot throw in getFavIds pipe, theme cannot handle

@@ -1,10 +1,10 @@
 'use strict'
 
 const {
-  apiManager: { createApiConfig },
+  apiManager: { removeWishlistProduct },
+  clientManger: { createApiConfig },
   errorManager: { throwOnApiError }
 } = require('@apite/shopware6-utility')
-const { removeWishlistProduct } = require('@shopware-pwa/shopware-6-client')
 
 /**
  * @param {ApiteSW6Utility.PipelineContext} context
@@ -16,7 +16,7 @@ module.exports = async (context, input) => {
   const apiConfig = await createApiConfig(context)
   await Promise.all(
     input.productIds.map(
-      element => removeWishlistProduct(element, apiConfig).catch(e => throwOnApiError(e, context))
+      prodId => removeWishlistProduct(apiConfig, prodId).catch(e => throwOnApiError(e, context))
     )
   )
 }
