@@ -1,4 +1,4 @@
 'use strict'
 
-const extension = '@apite-shopware6-favorites'
-module.exports = require('@apite/shopware6-utility').logDecorator(extension)
+const extension = '@shopgate-shopware6-favorites'
+module.exports = require('@shopgate/shopware6-utility').logDecorator(extension)

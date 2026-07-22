@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "id": "@apite/shopware6-favorites",
+  "id": "@shopgate/shopware6-favorites",
   "configuration": {
     "endpoint": {
       "type": "admin",

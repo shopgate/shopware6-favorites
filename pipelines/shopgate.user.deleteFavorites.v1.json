@@ -39,8 +39,8 @@
           ]
         },
         "then": {
-          "id": "@apite/shopware6-favorites",
-          "path": "@apite/shopware6-favorites/src/steps/deleteFavorites.js",
+          "id": "@shopgate/shopware6-favorites",
+          "path": "@shopgate/shopware6-favorites/src/steps/deleteFavorites.js",
           "type": "extension",
           "input": [
             {"id": "1", "key": "productIds"}

@@ -1,4 +1,4 @@
-## Shopgate Connect Shopware 6 Favorites Extension by Apite
+## Shopgate Connect Shopware 6 Favorites Extension by Apite, Maintained by Shopgate
 
 ### Development
 

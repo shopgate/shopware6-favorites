@@ -4,7 +4,7 @@ const {
   apiManager: { getWishlistProducts, getSessionContext },
   clientManger: { createApiConfig },
   errorManager: { throwOnApiError }
-} = require('@apite/shopware6-utility')
+} = require('@shopgate/shopware6-utility')
 const { decorateError } = require('../services/logDecorator')
 
 /**

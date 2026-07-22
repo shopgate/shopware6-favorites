@@ -1,29 +1,27 @@
 {
-  "name": "@apite/shopware6-favorites",
-  "description": "Shopgate Connect Shopware 6 Favorites extension created by Apite",
+  "name": "@shopgate/shopware6-favorites",
+  "description": "Shopgate Connect Shopware 6 Favorites extension created by Apite, maintained by Shopgate.",
   "license": "Apache-2.0",
   "type": "commonjs",
   "repository": {
-    "url": "https://gitlab.com/apite/shopgate/connect-engage/ext-shopware6-favorites"
+    "url": "https://github.com/shopgate/shopware6-favorites"
   },
   "scripts": {
     "utility:develop": "npm install --save ../../shopware6-utility",
     "lint": "./node_modules/.bin/eslint --ext .js --ext .jsx ."
   },
   "dependencies": {
-    "@apite/shopware6-utility": "^2.0.0"
+    "@shopgate/shopware6-utility": "^3.0.0"
   },
   "devDependencies": {
     "@shopware-pwa/commons": "^1.5.3",
     "@types/bunyan": "^1.8.8",
     "@types/node": "^17.0.19",
-    "standard": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.5.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
     "nyc": "15.1.0"
   }
 }

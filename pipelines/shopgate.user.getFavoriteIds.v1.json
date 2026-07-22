@@ -28,8 +28,8 @@
           ]
         },
         "then": {
-          "id": "@apite/shopware6-favorites",
-          "path": "@apite/shopware6-favorites/src/steps/getFavorites.js",
+          "id": "@shopgate/shopware6-favorites",
+          "path": "@shopgate/shopware6-favorites/src/steps/getFavorites.js",
           "type": "extension",
           "input": [],
           "output": [

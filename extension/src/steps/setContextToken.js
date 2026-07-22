@@ -1,6 +1,6 @@
 'use strict'
 
-const { contextManager: { saveContextToken } } = require('@apite/shopware6-utility')
+const { contextManager: { saveContextToken } } = require('@shopgate/shopware6-utility')
 
 /**
  * This pipeline should be called from the cart extension,
