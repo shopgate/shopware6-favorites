@@ -1,5 +1,13 @@
 ## Shopgate Connect Shopware 6 Favorites Extension by Apite, Maintained by Shopgate
 
+### Requirements
+
+Requires `@shopgate/shopware6-cart` v3.1.0 or higher. Whenever `@shopgate/shopware6-user` sets the
+Shopware context token (login, logout, registration), the cart calls
+`shopgate.shopware6-cart.setFavoritesContextToken.v1`. The cart ships a placeholder for it that does nothing,
+and this extension overrides it to store the customer's Shopware context token and merge guest favorites.
+Install or update this extension after the cart extension, otherwise the cart's placeholder wins.
+
 ### Development
 
 #### Setup
